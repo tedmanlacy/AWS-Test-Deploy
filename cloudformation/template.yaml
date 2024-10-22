@@ -468,8 +468,9 @@ Resources:
       DesiredCapacity: !Ref AutoScalingGroupDesiredCapacity
       MinSize: !Ref AutoScalingGroupMinSize
       MaxSize: !Ref AutoScalingGroupMaxSize
-      LaunchConfigurationName:
-        Ref: WebappLaunchConfig
+      LaunchTemplate:
+        LaunchTemplateId: ltlt-0d19913a7e72006b2
+        Version: 1
       VPCZoneIdentifier:
         - Ref: PrivateSubnet1 
         - Ref: PrivateSubnet2 
